@@ -9,6 +9,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { UsersComponent } from './pages/users/users.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { EnterButtonComponent } from './core/components/enter-button/enter-button.component';
+import { FooterComponent } from './core/components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EnterButtonComponent } from './core/components/enter-button/enter-butto
     LoginComponent,
     UsersComponent,
     WelcomeComponent,
-    EnterButtonComponent
+    EnterButtonComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

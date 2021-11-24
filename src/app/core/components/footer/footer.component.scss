@@ -1,0 +1,36 @@
+footer {
+  background-color: #000000;
+  color: #6f6f6f;
+  padding-top: 5vw;
+  padding-left: 12vw;
+  padding-bottom: 3vw;
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: underline !important;
+}
+
+h1 {
+  font-size: 1.8vw;
+}
+
+ul {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 3.5vw 0;
+  max-width: 80vw;
+}
+
+li {
+  font-size: 1.25vw;
+  text-transform: capitalize;
+  min-width: 20vw;
+  margin-bottom: 1vw;
+}
+
+p {
+  font-size: 1.4vw;
+}
