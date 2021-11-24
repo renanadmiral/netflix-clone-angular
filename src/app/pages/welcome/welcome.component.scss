@@ -1,0 +1,80 @@
+img {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  background-image: url(../../../assets/images/titles-background.png);
+  background-position: center;
+  background-size: 100% 100%;
+  color: white;
+  text-align: center;
+  padding-bottom: 6.5vw;
+  padding-top: 2vw;
+}
+
+#netflix-logo {
+  width: 11.45vw;
+  margin-left: 5.55vw;
+  margin-bottom: 7.5vw;
+}
+
+#header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#header-content * {
+  margin: 15px 0;
+}
+
+h1 {
+  font-size: 3.85vw;
+  font-weight: 800;
+  max-width: 50vw;
+}
+
+h3 {
+  font-size: 1.6vw;
+}
+
+#enter-btn {
+  height: 4vw;
+  width: 10vw;
+  font-size: 1.5vw;
+}
+
+hr {
+  margin: 0;
+  border: #2d2d2d solid 4px;
+}
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #000000;
+  align-items: center;
+  padding-top: 1vw;
+  padding-bottom: 5vw;
+  padding-right: 6vw;
+  padding-left: 12vw;
+}
+
+.article-img {
+  width: 38.5vw;
+}
+
+.article-text {
+  color: white;
+  max-width: 40vw;
+}
+
+.article-text h2 {
+  font-size: 3.47vw;
+  font-weight: 800;
+}
+
+.article-text h4 {
+  font-size: 1.8vw;
+}
