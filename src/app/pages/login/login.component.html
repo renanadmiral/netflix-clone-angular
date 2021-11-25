@@ -1,1 +1,27 @@
-<p>login works!</p>
+<main class="container_login">
+  <div class="login-netflix_logo">
+    <img src="../../../assets/images/netflix-logo.png" alt="Netflix Logo" />
+  </div>
+  <div class="container-form">
+    <section class="form-login">
+      <p class="title-form">Entrar</p>
+      <form>
+        <input
+          class="form-input"
+          type="text"
+          placeholder="Email ou número de telefone"
+        />
+        <input class="form-input" type="password" placeholder="Senha" />
+        <div class="enter-btn">
+          <app-enter-button (click)="handleLogin()"></app-enter-button>
+        </div>
+      </form>
+      <p class="text-captcha">
+        Esta página é protegida pelo Google reCAPTCHA para garantir que você não
+        é um robô.
+        <a href="#">Saiba mais</a>
+      </p>
+    </section>
+  </div>
+</main>
+<app-footer [links]="footerLinks"></app-footer>
