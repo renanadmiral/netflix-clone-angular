@@ -5,6 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Login } from 'src/app/core/models/Login';
 import { User } from 'src/app/core/models/User';
 import { LoginService } from 'src/app/core/services/login.service';
@@ -20,7 +21,7 @@ export class LoginComponent implements OnInit {
     password: [null, [Validators.required, Validators.minLength(6)]],
   });
 
-  constructor(private ls: LoginService, private fb: FormBuilder) {}
+  constructor(private ls: LoginService, private fb: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
   }
@@ -33,6 +34,7 @@ export class LoginComponent implements OnInit {
         delete data['token'];
         const user: User = data as User;
         localStorage.setItem('users', JSON.stringify(user));
+        this.router.navigate([this.ls.intendedRoute]);
       });
     }
   }
