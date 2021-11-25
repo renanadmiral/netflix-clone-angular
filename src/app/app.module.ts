@@ -10,6 +10,7 @@ import { UsersComponent } from './pages/users/users.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { EnterButtonComponent } from './core/components/enter-button/enter-button.component';
 import { FooterComponent } from './core/components/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FooterComponent } from './core/components/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
