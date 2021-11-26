@@ -66,7 +66,7 @@ export class LoginComponent implements OnInit {
 
   ValidateAccount(
     control: AbstractControl
-  ): { [key: string | number]: any } | null {
+  ): { [key: string | number]: Boolean } | null {
     if (control.value) {
       let emailValidation = /^[^@]+@[^@]+\.[^@]+$/.test(control.value);
       if (emailValidation) return null;
