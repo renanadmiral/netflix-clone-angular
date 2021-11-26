@@ -10,10 +10,12 @@ import { NetflixService } from 'src/app/core/services/netflix.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  userProfile: any;
-  serie: any;
-  series: Serie[] = [];
-  
+  //buscar nome do usuário na tela users posteriormente
+  userName: string = 'Usuário 1';
+  userProfile: UserProfile = {};
+  popularSeries: Serie[] = [];
+  keepWatchingSeries: Serie[] = [];
+
   constructor(
     private ns: NetflixService,
     private router: Router,
@@ -21,20 +23,29 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getUserProfile();
+    this.getSeries();
   }
 
-  getSeries() {
-    const ids = [1, 2, 3, 4, 5, 6, 7, 8];
-    ids.map((id) =>
-      this.ns.getSerieById(id).subscribe((serie) => {
-        this.series.push(serie);
-      })
-    );
+  private getSeries() {
+    const popularIds = this.userProfile.popular;
+    const keepWatchingIds = this.userProfile.keepWatching;
+
+    if (popularIds) {
+      popularIds.map((id: number) =>
+        this.ns.getSerieById(id).subscribe((serie) => {
+          this.popularSeries.push(serie);
+        })
+      );
+    }
+    if (keepWatchingIds) {
+      keepWatchingIds.map((id: number) =>
+        this.ns.getSerieById(id).subscribe((serie) => {
+          this.keepWatchingSeries.push(serie);
+        })
+      );
+    }
   }
-  getSerieById(id: number) {
-    return this.ns.getSerieById(id).subscribe((serie) => this.serie = serie);
-  }
-  
+
   private getUserProfile() {
     const jsonUsers = localStorage.getItem('userProfile');
     if (jsonUsers) {

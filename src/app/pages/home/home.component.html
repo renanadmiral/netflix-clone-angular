@@ -56,9 +56,16 @@
         </button>
       </div>
     </section>
-    <!-- cards das series irão dentro da section abaixo -->
-    <section>
+    <section id="series-cards">
+      <app-series-cards
+        [cardTitle]="'Populares na Netflix'"
+        [series]="popularSeries"
+      ></app-series-cards>
 
+      <app-series-cards
+        [cardTitle] = "'Continuar assistindo como ' + userName"
+        [series] = "keepWatchingSeries"
+      ></app-series-cards>
     </section>
   </main>
 </div>
