@@ -32,7 +32,7 @@ export class UsersComponent implements OnInit {
     }
     const jsonUsers = localStorage.getItem('users');
     if (jsonUsers) {
-      this.users = JSON.parse(jsonUsers) as User[];
+      this.users = JSON.parse(jsonUsers).users as User[];
     }
   }
 }

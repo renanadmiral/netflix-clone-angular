@@ -1,0 +1,110 @@
+.content-users {
+    background-color: #141414;
+    height: 100vh;
+}
+
+header {
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 100%);
+}
+
+.logo {
+    margin-left: 80px;
+    margin-top: 30px;
+    width: 120px;
+}
+
+main {
+    padding: 6vw;
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 3.2em;
+    color: white;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 768px){
+    h1 {
+        font-size: 2em;
+    }
+}
+
+.user-profile {
+    display: inline-block;
+    margin-top: 1vw;
+    margin-right: 2vw;
+}
+
+.user-profile:hover img {
+    border: solid 3px white;
+}
+
+.user-profile:hover p {
+    color: white;
+}
+
+.user-image {
+    width: 10vw;
+    border-radius: 5px;
+}
+
+.user-name {
+    color: gray;
+    text-align: center;
+    margin-top: 1vw;
+}
+
+@media only screen and (max-width: 768px){
+    .user-profile {
+        margin-right: 2vw;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .user-image {
+        width: 12vw;
+    }
+}
+
+@media only screen and (max-width: 426px){
+    .user-image {
+        width: 20vw;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .user-name {
+        font-size: .9em;
+    }
+}
+
+button {
+    background: none;
+    color: gray;
+    border: solid 2px gray;
+    padding: .4vw 2vw;
+    font-size: 1.2em;
+    margin: 3em auto 0 auto;
+}
+
+button:hover {
+    color: white;
+    border-color:white;
+}
+
+@media only screen and (max-width: 768px){
+    button {
+        margin-top: 1vw;
+        font-size: 1em;
+    }
+}

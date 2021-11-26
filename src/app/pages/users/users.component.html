@@ -1,1 +1,17 @@
-<p>users works!</p>
+<div class="content-users">
+    <header>
+        <img src="../../../assets/images/netflix-logo.png" alt="netflix logo" class="logo">
+    </header>
+    <main>
+        <section>
+            <h1>Quem está assistindo?</h1>
+            <ul>
+                <li *ngFor="let user of users" class="user-profile" (click)="getUserById(user.id)">
+                    <img src="{{user.avatarUrl}}" class="user-image">
+                    <p class="user-name">{{user.name}}</p>
+                </li>
+            </ul>
+            <button>Gerenciar perfis</button>
+        </section>
+    </main>
+</div>
