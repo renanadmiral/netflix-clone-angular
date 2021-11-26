@@ -60,7 +60,9 @@ export class LoginComponent implements OnInit {
     control: AbstractControl
   ): { [key: string | number]: any } | null {
     if (control.value) {
-      if (control.value.includes('@')) return null;
+      
+      let emailValidation = /^[^@]+@[^@]+\.[^@]+$/.test(control.value)
+      if (emailValidation) return null;
 
       if (control.value.length === 11 && !isNaN(control.value)) {
         let isPhoneNumber = /^(.)\1*$/.test(control.value);
