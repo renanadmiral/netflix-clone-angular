@@ -16,25 +16,42 @@ import { LoginService } from 'src/app/core/services/login.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  public form: FormGroup = this.fb.group({
-    account: [null, [Validators.required, this.ValidateAccount]],
-    password: [null, [Validators.required, Validators.minLength(6)]],
+  showAboutMore = false;
+
+  footerLinks: string[] = [
+    'perguntas frequentes',
+    'centro de ajuda',
+    ' termos de uso',
+    'privacidade',
+    'preferências de cookies',
+    'informações corporativas',
+  ];
+
+  constructor(
+    private ls: LoginService,
+    private fb: FormBuilder,
+    private router: Router
+  ) {}
+
+  ngOnInit(): void {}
+
+  public formLogin: FormGroup = this.fb.group({
+    account: ['', [Validators.required, this.ValidateAccount]],
+    password: [
+      '',
+      [Validators.required, Validators.minLength(6), Validators.maxLength(60)],
+    ],
   });
 
-  constructor(private ls: LoginService, private fb: FormBuilder, private router: Router) {}
-
-  ngOnInit(): void {
-  }
-
   logMeIn() {
-    if (this.form.valid) {
-      this.ls.postLogin(this.form.value as Login).subscribe((res: any) => {
+    if (this.formLogin.valid) {
+      this.ls.postLogin(this.formLogin.value as Login).subscribe((res: any) => {
         const data = JSON.parse(res);
         localStorage.setItem('token', JSON.stringify(data['token']));
         delete data['token'];
         const user: User = data as User;
         localStorage.setItem('users', JSON.stringify(user));
-        this.router.navigate([this.ls.intendedRoute]);
+        this.router.navigate(['/home']);
       });
     }
   }
@@ -44,7 +61,13 @@ export class LoginComponent implements OnInit {
   ): { [key: string | number]: any } | null {
     if (control.value) {
       if (control.value.includes('@')) return null;
-      if (control.value.length != 11 && !isNaN(control.value)) return null;
+
+      if (control.value.length === 11 && !isNaN(control.value)) {
+        let isPhoneNumber = /^(.)\1*$/.test(control.value);
+
+        if (!isPhoneNumber) return null;
+      }
+
       return { accountInvalid: true };
     }
     return null;

@@ -1,1 +1,65 @@
-<p>login works!</p>
+<main class="container_login">
+  <div class="login-netflix_logo">
+    <img src="../../../assets/images/netflix-logo.png" alt="Netflix Logo" />
+  </div>
+  <div class="container-form">
+    <section class="form-login">
+      <p class="title-form">Entrar</p>
+      <form [formGroup]="formLogin">
+        <input
+          class="form-input"
+          type="text"
+          placeholder="Email ou número de telefone"
+          formControlName="account"
+        />
+        <p
+          class="text-message_error"
+          *ngIf="
+            formLogin.controls['account'].invalid &&
+            (formLogin.controls['account'].dirty ||
+              formLogin.controls['account'].touched)
+          "
+        >
+          Informe um e-mail ou número de telefone válido
+        </p>
+        <input
+          class="form-input"
+          type="password"
+          placeholder="Senha"
+          maxlength="60"
+          formControlName="password"
+        />
+        <p
+          class="text-message_error"
+          *ngIf="
+            formLogin.controls['password'].invalid &&
+            (formLogin.controls['password'].dirty ||
+              formLogin.controls['password'].touched)
+          "
+        >
+          A senha deve ter entre 4 e 60 caracteres.
+        </p>
+        <div class="enter-btn">
+          <app-enter-button (click)="logMeIn()"></app-enter-button>
+        </div>
+      </form>
+      <p class="text-captcha">
+        Esta página é protegida pelo Google reCAPTCHA para garantir que você não
+        é um robô.
+        <span
+          class="about-more"
+          (click)="showAboutMore = !showAboutMore"
+          *ngIf="!showAboutMore"
+          >Saiba mais</span
+        >
+      </p>
+      <p class="text-about_more" *ngIf="showAboutMore">
+        As informações recolhidas pelo Google reCAPTCHA estão sujeitas à
+        Política de Privacidade e Termos de Uso, e são usadas para oferecer,
+        manter e melhorar o serviço reCAPTCHA e por questões de segurança (não
+        são usadas para exibir anúncios personalizados pelo Google).
+      </p>
+    </section>
+  </div>
+</main>
+<app-footer [links]="footerLinks"></app-footer>

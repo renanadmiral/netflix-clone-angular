@@ -1,0 +1,89 @@
+.container_login {
+  background: #fff url(../../../assets/images/titles-background.png) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+
+  .container-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login-netflix_logo {
+    height: 7rem;
+    margin-left: 5rem;
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.form-login {
+  background: rgba(0, 0, 0, 0.75);
+  width: 440px;
+  max-width: 440px;
+  height: 40rem;
+  padding: 60px 68px 40px;
+  display: flex;
+  flex-direction: column;
+
+  .title-form {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+
+  .enter-btn {
+    height: 3.12rem;
+    font-size: 1rem;
+    margin-top: 1.8rem;
+  }
+
+  .form-input {
+    background-color: #333333;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    height: 3rem;
+    width: 100%;
+    color: #8c8c8c;
+    padding: 10px;
+    outline: none;
+  }
+
+  .text-captcha {
+    color: #8c8c8c;
+    font-size: 0.8rem;
+    margin-top: 2.5rem;
+  }
+
+  .text-about_more {
+    color: #8c8c8c;
+    font-size: 0.8rem;
+  }
+
+  .about-more {
+    color: #0080ff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .text-message_error {
+    color: #f28300;
+    font-size: 0.8rem;
+  }
+}
+
+img {
+  width: 10rem;
+  height: 6rem;
+}
+
+@media only screen and (max-width: 740px) {
+  .container_login {
+    background-image: none;
+    background-color: #000;
+    color: white;
+  }
+}
