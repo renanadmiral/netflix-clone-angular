@@ -60,12 +60,20 @@
       <app-series-cards
         [cardTitle]="'Populares na Netflix'"
         [series]="popularSeries"
+        (serieEmitter)="addModalObj($event)"
       ></app-series-cards>
 
       <app-series-cards
         [cardTitle] = "'Continuar assistindo como ' + userName"
         [series] = "keepWatchingSeries"
+        (serieEmitter)="addModalObj($event)"
       ></app-series-cards>
+
+      <app-modal
+        *ngIf="(modalObj | json) != '{}'"
+        [serie]="modalObj"
+        (serieEraser)="resetModalObj($event)"
+      ></app-modal>
     </section>
   </main>
 </div>

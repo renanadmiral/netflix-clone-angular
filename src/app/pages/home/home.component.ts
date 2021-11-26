@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   userProfile: UserProfile = {};
   popularSeries: Serie[] = [];
   keepWatchingSeries: Serie[] = [];
+  modalObj: Serie = {};
 
   constructor(
     private ns: NetflixService,
@@ -55,4 +56,11 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  addModalObj(serie: Serie) {
+    this.modalObj = serie;
+  }
+
+  resetModalObj(serie: Serie) {
+    this.modalObj = serie;
+  }
 }

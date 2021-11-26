@@ -13,6 +13,7 @@ import { FooterComponent } from './core/components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HamburguerMenuComponent } from './pages/home/hamburguer-menu/hamburguer-menu.component';
 import { SeriesCardsComponent } from './pages/home/series-cards/series-cards.component';
+import { ModalComponent } from './pages/home/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SeriesCardsComponent } from './pages/home/series-cards/series-cards.com
     EnterButtonComponent,
     FooterComponent,
     HamburguerMenuComponent,
-    SeriesCardsComponent
+    SeriesCardsComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
