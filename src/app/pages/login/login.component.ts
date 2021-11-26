@@ -56,12 +56,19 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  ValidationInput(typeInput: string) {
+    return (
+      this.formLogin.controls[typeInput].invalid &&
+      this.formLogin.controls[typeInput].dirty &&
+      this.formLogin.controls[typeInput].touched
+    );
+  }
+
   ValidateAccount(
     control: AbstractControl
   ): { [key: string | number]: any } | null {
     if (control.value) {
-      
-      let emailValidation = /^[^@]+@[^@]+\.[^@]+$/.test(control.value)
+      let emailValidation = /^[^@]+@[^@]+\.[^@]+$/.test(control.value);
       if (emailValidation) return null;
 
       if (control.value.length === 11 && !isNaN(control.value)) {

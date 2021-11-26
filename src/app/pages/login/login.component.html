@@ -14,11 +14,7 @@
         />
         <p
           class="text-message_error"
-          *ngIf="
-            formLogin.controls['account'].invalid &&
-            (formLogin.controls['account'].dirty ||
-              formLogin.controls['account'].touched)
-          "
+          *ngIf="ValidationInput('account')"
         >
           Informe um e-mail ou número de telefone válido
         </p>
@@ -31,11 +27,7 @@
         />
         <p
           class="text-message_error"
-          *ngIf="
-            formLogin.controls['password'].invalid &&
-            (formLogin.controls['password'].dirty ||
-              formLogin.controls['password'].touched)
-          "
+          *ngIf="ValidationInput('password')"
         >
           A senha deve ter entre 4 e 60 caracteres.
         </p>
