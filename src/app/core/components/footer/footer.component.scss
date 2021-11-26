@@ -34,3 +34,27 @@ li {
 p {
   font-size: 1.4vw;
 }
+
+@media only screen and (max-width: 438px){
+  footer {
+      padding-top: 15vw;
+  }
+}
+
+@media only screen and (max-width: 438px){
+  h1 {
+      font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 438px){
+  ul {
+      flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 438px){
+  li a {
+    font-size: 5vw;
+  }
+}
