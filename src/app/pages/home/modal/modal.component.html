@@ -26,7 +26,7 @@
     <main>
       <article id="desc">
         <ul>
-          <li id="relevance">
+          <li *ngIf="serie.relevance" id="relevance">
             {{serie.relevance}}% relevante
           </li>
           <li id="year">
