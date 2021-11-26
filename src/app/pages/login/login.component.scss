@@ -44,7 +44,7 @@
     background-color: #333333;
     border: none;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     height: 3rem;
     width: 100%;
     color: #8c8c8c;
@@ -53,9 +53,25 @@
   }
 
   .text-captcha {
-    color: white;
+    color: #8c8c8c;
     font-size: 0.8rem;
     margin-top: 2.5rem;
+  }
+
+  .text-about_more {
+    color: #8c8c8c;
+    font-size: 0.8rem;
+  }
+
+  .about-more {
+    color: #0080ff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .text-message_error {
+    color: #f28300;
+    font-size: 0.8rem;
   }
 }
 
@@ -64,8 +80,8 @@ img {
   height: 6rem;
 }
 
-@media only screen and (max-width: 740px){
-  .container_login{
+@media only screen and (max-width: 740px) {
+  .container_login {
     background-image: none;
     background-color: #000;
     color: white;
