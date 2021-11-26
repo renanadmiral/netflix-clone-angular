@@ -1,16 +1,14 @@
 img {
   width: 100%;
-  height: 100%;
 }
 
 header {
   background-image: url(../../../assets/images/titles-background.png);
   background-position: center;
-  background-size: 100% 100%;
+  background-size: cover;
   color: white;
   text-align: center;
-  padding-bottom: 6.5vw;
-  padding-top: 2vw;
+  padding: 2rem 0 8.8rem 0;
 }
 
 #netflix-logo {
@@ -30,24 +28,24 @@ header {
 }
 
 h1 {
-  font-size: 3.85vw;
+  font-size: 4.5rem;
   font-weight: 800;
   max-width: 50vw;
 }
 
 h3 {
-  font-size: 1.6vw;
+  font-size: 2rem;
 }
 
 #enter-btn {
-  height: 4vw;
-  width: 10vw;
-  font-size: 1.5vw;
+  width: 13rem;
+  height: 4rem;
+  font-size: 1.75rem;
 }
 
 hr {
   margin: 0;
-  border: #2d2d2d solid 4px;
+  border: #2d2d2d solid 1.5px;
 }
 
 article {
@@ -71,10 +69,10 @@ article {
 }
 
 .article-text h2 {
-  font-size: 3.47vw;
+  font-size: 3.12rem;
   font-weight: 800;
 }
 
 .article-text h4 {
-  font-size: 1.8vw;
+  font-size: 1.62rem;
 }
