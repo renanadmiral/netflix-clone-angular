@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Serie } from 'src/app/core/models/Serie';
 
 @Component({
@@ -9,14 +9,14 @@ import { Serie } from 'src/app/core/models/Serie';
 export class SeriesCardsComponent implements OnInit {
   @Input() cardTitle: string = '';
   @Input() series: Serie[] = [];
+  @Output() serieEmitter = new EventEmitter<Serie>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  //esse método é para o modal
-  // filterImgUrl(url: string = '') {
-  //   return url.replace('()', '');
-  // }
+  emitSerie(serie: Serie) {
+    this.serieEmitter.emit(serie);
+  }
 }
