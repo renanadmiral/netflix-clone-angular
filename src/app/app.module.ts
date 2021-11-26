@@ -11,6 +11,7 @@ import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { EnterButtonComponent } from './core/components/enter-button/enter-button.component';
 import { FooterComponent } from './core/components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HamburguerMenuComponent } from './pages/home/hamburguer-menu/hamburguer-menu.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     UsersComponent,
     WelcomeComponent,
     EnterButtonComponent,
-    FooterComponent
+    FooterComponent,
+    HamburguerMenuComponent
   ],
   imports: [
     BrowserModule,
