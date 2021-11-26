@@ -1,0 +1,11 @@
+<div id="wrapper">
+  <h1>{{ cardTitle }}</h1>
+  <ul>
+    <li *ngFor="let serie of series">
+      <div class="card-image">
+        <img [src]="serie.cardImage" alt="Series Card">
+      </div>
+      <!-- inserir modal abaixo (todos dados da serie já estao neste ngFor) -->
+    </li>
+  </ul>
+</div>
