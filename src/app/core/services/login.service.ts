@@ -17,7 +17,7 @@ export class LoginService {
   postLogin(login: Login) {
     const HTTPOptions: Object = {
       responseType: 'text'
-   }
+  }
     return this.http.post(`${this.apiUrl}/login`, login, HTTPOptions).pipe(take(1));
   }
 
