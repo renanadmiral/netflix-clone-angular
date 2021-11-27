@@ -1,27 +1,55 @@
-# App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.0.
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/renanadmiral/netflix-clone-angular?color=red">
 
-## Development server
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/renanadmiral/netflix-clone-angular?color=red">
+  
+  <a href="#">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/renanadmiral/netflix-clone-angular?color=red">
+  </a>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  <img alt="GitHub" src="https://img.shields.io/github/license/renanadmiral/netflix-clone-angular?color=red">
+</p>
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## :pushpin: Sobre
 
-## Build
+Projeto desenvolvido na conclusão do módulo de frontend do curso Santander Coders - Web Full-Stack (Let's Code)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+#### Equipe
+- [Ana](https://github.com/eianacaroline)
+- [Carlos](https://github.com/carlosvictorino93)
+- [Everton](https://github.com/evertoont)
+- [Renan](https://github.com/renanadmiral)
 
-## Running unit tests
+## 🧪 Tecnologias
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-## Running end-to-end tests
+- [Angular 13](https://angular.io/)
+- [SASS](https://sass-lang.com/)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🚀 Como rodar?
 
-## Further help
+Execute os comandos no seu terminal:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+# Clone o repositório
+$ git clone https://github.com/renanadmiral/netflix-clone-angular
+
+# Entre no repositório
+$ cd netflix-clone-angular
+
+# Instale as dependências
+$ npm i
+
+# Execute a aplicação
+$ ng serve
+```
+
+Acesse em seu navegador http://localhost:4200/ para ver o resultado.
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
